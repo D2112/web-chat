@@ -63,7 +63,7 @@ public class ChatService implements ConnectionHandler {
 
     private void handleMessage(Message message, Client client) {
         Message.Type type = message.getType();
-        Room clientRoom = roomByIdMap.get(client.getCurrentRoomID());
+        Room clientRoom = findClientRoom(client);
         switch (type) {
             case NAME:
                 client.setName(message.getText());

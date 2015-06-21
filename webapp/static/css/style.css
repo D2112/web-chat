@@ -71,8 +71,8 @@ body {
     height: 80%;
     background: #FFFFE0;
     color: #000000;
-    border: 3px solid #B54848;
-    border-bottom: 6px solid #B54848;;
+    border: 3px solid #b0b5af;
+    border-bottom: 6px solid #b0b5af;
     border-radius: 2px;
     font-size: 24px;
     margin-bottom: -8px;
@@ -86,8 +86,8 @@ body {
     height: 20%;
     background: #F2F2F2;
     color: #000000;
-    border: 3px solid #B54848;
-    border-top: 6px solid #B54848;;
+    border: 3px solid #b0b5af;
+    border-top: 6px solid #b0b5af;
     border-radius: 2px;
     font-size: 24px;
     margin-top: -8px;

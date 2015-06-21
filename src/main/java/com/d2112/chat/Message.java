@@ -10,6 +10,7 @@ public class Message {
 
     public Message(String text, Type type) {
         this.text = text;
+        this.type = type;
     }
 
     public Message(String senderName, String text, Type type) {
