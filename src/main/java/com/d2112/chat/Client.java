@@ -6,7 +6,6 @@ public class Client {
     private static int lastAssignedID = 0; //for increment
     private int id;
     private ClientConnection connection;
-    private Status status;
     private String name;
     private Integer currentRoomID;
 
@@ -36,20 +35,8 @@ public class Client {
         this.currentRoomID = currentRoomID;
     }
 
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
     public void sendMessage(String message) {
         connection.sendMessage(message);
-    }
-
-    public enum Status {
-        INACTIVE, ACTIVE, AWAITING_COMPANY
     }
 
     @Override
@@ -61,7 +48,6 @@ public class Client {
 
         if (id != client.id) return false;
         if (connection != null ? !connection.equals(client.connection) : client.connection != null) return false;
-        if (status != client.status) return false;
         if (name != null ? !name.equals(client.name) : client.name != null) return false;
         return !(currentRoomID != null ? !currentRoomID.equals(client.currentRoomID) : client.currentRoomID != null);
 
@@ -71,7 +57,6 @@ public class Client {
     public int hashCode() {
         int result = id;
         result = 31 * result + (connection != null ? connection.hashCode() : 0);
-        result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (currentRoomID != null ? currentRoomID.hashCode() : 0);
         return result;
